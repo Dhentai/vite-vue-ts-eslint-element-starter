@@ -6,6 +6,7 @@ specifiers:
   '@vitejs/plugin-vue': ^1.2.2
   '@vue/compiler-sfc': ^3.0.5
   autoprefixer: ^10.2.5
+  dayjs: ^1.10.4
   element-plus: ^1.0.2-beta.44
   eslint: ^7.26.0
   eslint-config-prettier: ^8.3.0
@@ -25,6 +26,7 @@ specifiers:
   vuex: ^4.0.0
 
 dependencies:
+  dayjs: 1.10.4
   element-plus: 1.0.2-beta.44_vue@3.0.11
   vue: 3.0.11
   vue-router: 4.0.8_vue@3.0.11
