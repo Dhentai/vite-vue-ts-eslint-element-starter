@@ -12,6 +12,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^3.4.0
   eslint-plugin-vue: ^7.9.0
+  normalize.css: ^8.0.1
   postcss-nesting: ^8.0.1
   prettier: ^2.3.0
   sass: ^1.32.13
@@ -28,6 +29,7 @@ specifiers:
 dependencies:
   dayjs: 1.10.4
   element-plus: 1.0.2-beta.44_vue@3.0.11
+  normalize.css: 8.0.1
   vue: 3.0.11
   vue-router: 4.0.8_vue@3.0.11
   vuex: 4.0.0_vue@3.0.11
@@ -2048,6 +2050,10 @@ packages:
 
   /normalize-wheel/1.0.1:
     resolution: {integrity: sha1-rsiGr/2wRQcNhWRH32Ls+GFG7EU=}
+    dev: false
+
+  /normalize.css/8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
     dev: false
 
   /null-check/1.0.0:
