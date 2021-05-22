@@ -19,7 +19,7 @@ export default defineComponent({
 </script>
 
 <style>
-@import url('../style/index.css');
+@import url('@/style/index.css');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

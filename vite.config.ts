@@ -1,12 +1,26 @@
-import * as path from 'path'
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
 import styleImport from 'vite-plugin-style-import';
-import pkg from './package.json'
+import pkg from './package.json';
+
+const pathResolve = (dir: string): string => {
+  return resolve(__dirname, '.', dir);
+};
+
+const alias: Record<string, string> = {
+  '@': pathResolve('src'),
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias,
+  },
+  define: {
+    _APP_VERSION: JSON.stringify(pkg.version),
+  },
   plugins: [
     vue(),
     eslintPlugin({
@@ -28,12 +42,10 @@ export default defineConfig({
       ],
     }),
   ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-  define: {
-    _APP_VERSION: JSON.stringify(pkg.version),
+  optimizeDeps: {
+    include: [
+      'element-plus/lib/locale/lang/zh-cn',
+      'element-plus/lib/locale/lang/en',
+    ],
   },
 });
