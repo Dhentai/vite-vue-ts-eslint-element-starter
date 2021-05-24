@@ -7,12 +7,15 @@ specifiers:
   '@vitejs/plugin-vue': ^1.2.2
   '@vue/compiler-sfc': ^3.0.5
   autoprefixer: ^10.2.5
+  axios: ^0.21.1
   dayjs: ^1.10.4
   element-plus: ^1.0.2-beta.44
   eslint: ^7.26.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^3.4.0
   eslint-plugin-vue: ^7.9.0
+  lodash-es: ^4.17.21
+  mitt: ^2.1.0
   normalize.css: ^8.0.1
   postcss-nesting: ^8.0.1
   prettier: ^2.3.0
@@ -28,8 +31,11 @@ specifiers:
   vuex: ^4.0.0
 
 dependencies:
+  axios: 0.21.1
   dayjs: 1.10.4
   element-plus: 1.0.2-beta.44_vue@3.0.11
+  lodash-es: 4.17.21
+  mitt: 2.1.0
   normalize.css: 8.0.1
   vue: 3.0.11
   vue-router: 4.0.8_vue@3.0.11
@@ -477,6 +483,14 @@ packages:
       normalize-range: 0.1.2
       postcss-value-parser: 4.1.0
     dev: true
+
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+    dependencies:
+      follow-redirects: 1.14.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1365,6 +1379,16 @@ packages:
     resolution: {integrity: sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==}
     dev: true
 
+  /follow-redirects/1.14.1:
+    resolution: {integrity: sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /fraction.js/4.1.0:
     resolution: {integrity: sha512-o9lSKpK0TDqDwTL24Hxqi6I99s942l6TYkfl6WvGWgLOIFz/YonSGKfiSeMadoiNvTfqnfOa9mjb5SGVbBK9/w==}
     dev: true
@@ -1841,6 +1865,10 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash.camelcase/4.3.0:
     resolution: {integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=}
