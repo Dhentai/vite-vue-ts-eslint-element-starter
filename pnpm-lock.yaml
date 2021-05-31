@@ -17,6 +17,7 @@ specifiers:
   lodash-es: ^4.17.21
   mitt: ^2.1.0
   normalize.css: ^8.0.1
+  nprogress: ^0.2.0
   postcss-nesting: ^8.0.1
   prettier: ^2.3.0
   sass: ^1.32.13
@@ -37,6 +38,7 @@ dependencies:
   lodash-es: 4.17.21
   mitt: 2.1.0
   normalize.css: 8.0.1
+  nprogress: 0.2.0
   vue: 3.0.11
   vue-router: 4.0.8_vue@3.0.11
   vuex: 4.0.0_vue@3.0.11
@@ -2088,6 +2090,10 @@ packages:
 
   /normalize.css/8.0.1:
     resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
+    dev: false
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha1-y480xTIT2JVyP8urkH6UIq28r7E=}
     dev: false
 
   /null-check/1.0.0:

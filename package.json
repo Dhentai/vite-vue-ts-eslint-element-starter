@@ -15,6 +15,7 @@
     "lodash-es": "^4.17.21",
     "mitt": "^2.1.0",
     "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
     "vue": "^3.0.5",
     "vue-router": "4",
     "vuex": "^4.0.0"
