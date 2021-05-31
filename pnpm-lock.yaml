@@ -9,6 +9,7 @@ specifiers:
   autoprefixer: ^10.2.5
   axios: ^0.21.1
   dayjs: ^1.10.4
+  dotenv: ^10.0.0
   element-plus: ^1.0.2-beta.44
   eslint: ^7.26.0
   eslint-config-prettier: ^8.3.0
@@ -34,6 +35,7 @@ specifiers:
 dependencies:
   axios: 0.21.1
   dayjs: 1.10.4
+  dotenv: 10.0.0
   element-plus: 1.0.2-beta.44_vue@3.0.11
   lodash-es: 4.17.21
   mitt: 2.1.0
@@ -1031,6 +1033,11 @@ packages:
     dependencies:
       is-obj: 2.0.0
     dev: true
+
+  /dotenv/10.0.0:
+    resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
+    engines: {node: '>=10'}
+    dev: false
 
   /dotgitignore/2.1.0:
     resolution: {integrity: sha512-sCm11ak2oY6DglEPpCB8TixLjWAxd3kJTs6UIcSasNYxXdFPV+YKlye92c8H4kKFqV5qYMIh7d+cYecEg0dIkA==}

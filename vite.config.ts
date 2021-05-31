@@ -4,6 +4,9 @@ import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
 import styleImport from 'vite-plugin-style-import';
 import pkg from './package.json';
+import { loadEnv } from './build/utils';
+
+const { VITE_PORT } = loadEnv();
 
 const pathResolve = (dir: string): string => {
   return resolve(__dirname, '.', dir);
@@ -20,6 +23,9 @@ export default defineConfig({
   },
   define: {
     _APP_VERSION: JSON.stringify(pkg.version),
+  },
+  server: {
+    port: VITE_PORT,
   },
   plugins: [
     vue(),
