@@ -3,8 +3,9 @@ import { excludeProps } from './utils';
 /**
  * 默认配置
  */
+const { VITE_BASE_URL } = import.meta.env;
 export const defaultConfig: AxiosRequestConfig = {
-  baseURL: '/api',
+  baseURL: VITE_BASE_URL,
   timeout: 10000, //10秒超时
   headers: {
     'Accept': 'application/json, text/plain, */*',
