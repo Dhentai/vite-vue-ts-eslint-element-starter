@@ -1,5 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface stateInter {}
+interface stateInter {
+  [k: string]: never;
+}
 
 const state: stateInter = {};
 

@@ -52,8 +52,7 @@ class EnclosureHttp {
     return this.sourceTokenList;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  public set cancelTokenList(value) {
+  public set cancelTokenList(val: Array<cancelTokenType>) {
     throw new Error('cancelTokenList不允许赋值');
   }
 
@@ -120,6 +119,8 @@ class EnclosureHttp {
         NProgress.start(); // 每次切换页面时，调用进度条
         const cancelKey = this.genUniqueKey($config);
         $config.cancelToken = new this.CancelToken(
+          // TODO remove this any
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (cancelExecutor: (cancel: any) => void) => {
             this.sourceTokenList.push({ cancelKey, cancelExecutor });
           },
@@ -223,6 +224,8 @@ class EnclosureHttp {
         .then((response: EnclosureHttpResoponse) => {
           resolve(response);
         })
+        // TODO remove this any
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         .catch((error: any) => {
           reject(error);
         });
