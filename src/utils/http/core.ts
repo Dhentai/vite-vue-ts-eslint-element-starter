@@ -205,7 +205,7 @@ class EnclosureHttp {
     url: string,
     param?: AxiosRequestConfig,
     axiosConfig?: EnclosureHttpRequestConfig,
-  ): Promise<EnclosureHttpResoponse> {
+  ): Promise<T> {
     const config = transformConfigByMethod(param, {
       method,
       url,
@@ -222,7 +222,9 @@ class EnclosureHttp {
       EnclosureHttp.axiosInstance
         .request(config)
         .then((response: EnclosureHttpResoponse) => {
-          resolve(response);
+          // TODO remove this any
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          resolve(response as any);
         })
         // TODO remove this any
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -236,7 +238,7 @@ class EnclosureHttp {
     url: string,
     params?: T,
     config?: EnclosureHttpRequestConfig,
-  ): Promise<EnclosureHttpResoponse> {
+  ): Promise<T> {
     return this.request<T>('post', url, params, config);
   }
 
@@ -244,7 +246,7 @@ class EnclosureHttp {
     url: string,
     params?: T,
     config?: EnclosureHttpRequestConfig,
-  ): Promise<EnclosureHttpResoponse> {
+  ): Promise<T> {
     return this.request<T>('get', url, params, config);
   }
 }

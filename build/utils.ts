@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { loadEnv } from 'vite';
 export interface ViteEnv {
   VITE_PORT: number;
   VITE_OPEN: boolean;
@@ -8,24 +8,17 @@ export interface ViteEnv {
   VITE_PROXY: [string, string][];
 }
 
-export function loadEnv(): ViteEnv {
-  const env = process.env.NODE_ENV;
+export function handleLoadEnv(mode: string): ViteEnv {
+  const env = loadEnv(mode, process.cwd());
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ret: any = {};
-  const envList = [`.env.${env}.local`, `.env.${env}`, '.env.local', '.env', ,];
-  envList.forEach((e) => {
-    dotenv.config({
-      path: e,
-    });
-  });
-  for (const envName of Object.keys(process.env)) {
-    let realName = (process.env as any)[envName].replace(/\\n/g, '\n');
+  for (const envName of Object.keys(env)) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let realName: any = env[envName].replace(/\\n/g, '\n');
     realName =
       realName === 'true' ? true : realName === 'false' ? false : realName;
     if (envName === 'VITE_PORT') {
       realName = Number(realName);
-    }
-    if (envName === 'VITE_OPEN') {
-      realName = Boolean(realName);
     }
     if (envName === 'VITE_PROXY') {
       try {
