@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^15.12.1",
+    "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "@vitejs/plugin-vue": "^1.2.3",
